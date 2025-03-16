@@ -1,0 +1,993 @@
+html {
+  scroll-behavior: smooth;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  height:4000px;
+}
+/*------------------------------------------------------------------HEADER-------------------------------------------------*/
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color:rgba(255, 0, 123, 0.5);
+    padding-right:  25px;
+    margin-right: 25px;
+    z-index: 10; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    font-size: 17px;
+}
+header .logo{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-left: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+i{
+  font-size: 25px;
+  color: white;
+  margin-left: -25px;
+}
+.logo i:nth-child(2){
+    position: absolute;
+    color: black;
+    left: 104px;
+    z-index: 400;
+    font-size: 25px;
+    bottom: 13px;
+}
+[type="text"]{
+    position: relative;
+    width:240px ;
+    height: 30px;
+    background-color: rgb(250, 250, 252);
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 25px;
+    border: 0;
+}
+nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+}
+ul li{
+  margin-right: 20px;
+
+}
+li a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+header li a:after {
+    position: absolute;
+    content: "";
+    width:  0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #f7f;
+    opacity: 0;
+}
+li a:hover:after {
+    width: 100%;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+.dropli {
+  position: relative;
+  display: inline-block;
+}
+.dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+  background-color:rgba(249, 249, 249, 0.99);
+  z-index: 3;
+  min-width: 162px;
+  text-align: center;
+  height: auto; 
+}
+.dropli:hover .dropdown,
+.dropli .dropdown:hover {
+  display: block;
+}
+.dropdown li {
+  list-style: none;
+  padding: 5px 0;
+  width: 100%;
+  text-align: justify;
+}
+.dropdown li a {
+  text-decoration: none;
+  color: rgba(255, 0, 136, 0.8);
+  display: block;
+  padding: 5px 10px;
+}
+
+/*-----------------------------------------------------------------HERO----------------------------------------------------------------------*/
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  background-image: url(https://images.pond5.com/close-spray-bottle-drops-black-084232554_prevstill.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+.hero h1{
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.hero p{
+  color: #b3b1b1;
+  font-size: 15px;
+  padding: 12px 0px;
+  letter-spacing: 2px;
+}
+.hero button{
+    font-size: 18px;
+    border: 0;
+    border-radius: 15px;
+    text-transform: capitalize;
+    padding: 16px 14px;
+    cursor: pointer;
+    margin: 10px;
+}
+.hero button:hover{
+  opacity: 0.4;
+}
+.hero button:nth-child(2){
+  background-color: #f7f;
+  color: white;
+}
+/*------------------------------------------------------------------About---------------------------------------------------------------------*/
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}  
+.about h2{
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.about h2::after{
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: #f7f;
+  display: block;
+  margin: 10px auto;
+}
+.about ul i{
+  font-size: 20px;
+  color: #f7f;
+  margin: 10px;
+}
+.about ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.about ul li{
+    margin: 11% 40px;
+    position: relative;
+    border: 2px solid #f7f;
+    border-radius: 15px;
+    padding: 0px;
+    width: 26%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 20px;
+    height: 59%;
+    overflow: hidden;
+}
+.about ul li::after{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(105, 56, 97, 0.6);
+  z-index:-1;
+}
+.about ul li:hover::after{
+  color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  transition: 0.5s;
+  }
+.about ul li:hover h3{
+  color: #fff;
+  }
+.about ul li h3{
+  font-size: 1.5rem;
+  margin: 20px;
+  width: 100%;
+}
+.about ul li a{
+  text-decoration: none;
+  color: #f7f;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+.about ul li i{
+  font-size: 3rem;
+}
+/*------------------------------------------------------------------Portfolio---------------------------------------------------------------*/
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color:rgba(86, 25, 25, 0.6);
+  height: 100vh;
+  min-height: 800px;
+}
+.con{
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+}
+.portfolio-grid {
+    display: grid;
+    grid-template: repeat(2, 250px) / repeat(3, 300px); /* Ensure each item has fixed size */
+    gap: 50px;
+    height: 100%;
+}
+.portfolio-grid .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    width: 300px; /* Ensure each item matches the grid size */
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio-grid img {
+    width: 100%;  /* Fill the portfolio item */
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-grid .portfolio-item .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+    flex-direction: column;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.portfolio-grid .portfolio-item:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+    color: #fff;
+}
+.portfolio h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.portfolio h2::after {
+    content: "";
+    width: 100px;
+    height: 5px;
+    background-color: #f7f;
+    display: block;
+    margin: 10px auto;
+}
+.overlay .icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-item: center;
+  gap: 50px;
+}
+.overlay .icons i{
+  color: #f7f;
+  cursor: pointer;
+
+}
+/*------------------------------------------------------------------Services------------------------------------------------------------------*/
+.services{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+.services h2{
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.services h2::after{
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: #f7f;
+  display: block;
+  margin: 10px auto;
+}
+.services-container{
+  display: grid;
+  grid-template: repeat(2, 200px) / repeat(3, 300px);
+  gap: 70px;
+}
+.service {
+  position: relative;
+  border: 1px solid #f7f;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  gap: 15px;
+  background: #fff;
+  font-size: 1rem;
+  overflow: hidden; 
+}
+.service::after {
+  content: "";
+  width: 0;
+  height: 0; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 0, 230, 0.7);
+  z-index: 0; 
+  transition: 0.3s;
+}
+.service:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.service * {
+  position: relative; /* Keeps text/icons above the background */
+  z-index: 1;
+}
+.service:hover .content{
+  color: white;
+}
+.service i {
+    font-size: 30px;
+    flex-shrink: 0;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 50px; 
+    height: 50px;
+    color: blue;
+}
+.service .content h3{
+  font-size: 1.5rem;
+}
+.service .content p{
+  font-size: 1rem;
+  color: #666;
+  font-weight: 700;
+}
+.why{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: auto;
+  padding-top: 50px;
+  margin-top: 90px;
+}
+.why .left{
+  width: 50%;
+  position: relative;
+  left: 153px;
+}
+.why .left h3{
+  font-size: 2.5rem;
+  margin: 40px 0;
+}
+.why .left p{
+  color: #666;
+  font-weight: 700;
+}
+.why .left h3::after{
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: #f7f;
+  display: block;
+  margin: 10px 0;
+}
+.why .left ul li{
+  margin: 30px 0;
+  color: #666;
+  font-weight: 700;
+}
+.why .left ul {
+    list-style: none; 
+    padding-left: 0;
+}
+
+.why .left ul li::before {
+    content: "✔";
+    color: green;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.why .right{
+}
+.end {
+  width: 100%;
+  height: 400px;
+  background-image: url(https://marwan1011994.github.io/Websit-1-HTML-CSS/images/choose.jpg);
+  position: relative; /* Ensure absolute children are positioned relative to this */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1; 
+}
+
+.end::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: -1; 
+}
+
+.end ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.end ul li {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.end i {
+  text-align: center;
+  margin: 20px auto;
+  position: relative;
+  color: #f7f;
+}
+/*------------------------------------------------------Prices--------------------------------*/
+.prices {
+  background-color: #f7f7f7; /* Soft neutral background */
+  padding: 100px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.prices h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+.prices h2::after {
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: #f73ff7;
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.prices .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.prices ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.prices ul li {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  width: 22%;
+  border: 2px solid #f73ff7; /* Subtle border */
+  height: 400px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  z-index: 1;
+}
+.prices ul li:hover{
+background-color: rgba(194, 52, 194, 0.2);
+}
+.prices ul li:hover h3{
+  color:rgb(21, 0, 255);
+}
+.prices ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(194, 52, 194, 0.2);
+  z-index: -1;
+  transition: height 0.4s ease-in-out;
+}
+
+.prices ul li:hover::after{
+  height: 100%;
+}
+
+.prices ul li:hover .price {
+  border: 2px solid #c234c2;
+}
+
+.prices ul li * {
+  position: relative;
+  z-index: 1;
+}
+
+.prices ul li .price {
+  font-weight: bold;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #f73ff7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  color: #c234c2;
+}
+
+.prices ul li .price p > span {
+  font-size: 30px;
+  font-weight: bold;
+}
+.prices ul li button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #c234c2; 
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+/*------------------------------------------------About2------------------------------------*/
+.team{
+  background-color: #f7f7f7;
+}
+.overlay-team{
+  width: 100%;
+  height: 400px;
+  background-image: url('https://marwan1011994.github.io/Websit-1-HTML-CSS/images/front-view-cologne-bottle-rotten-tree-branch-isolated-light-blue-background_140725-145204.jpg');
+  position: relative; /* Ensure absolute children are positioned relative to this */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; 
+  position: relative;
+}
+.overlay-team::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: -1; 
+}
+.overlay-team ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.overlay-team ul li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: #fff;
+  }
+.overlay-team ul li img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  padding: 0;
+  display: flex;
+}
+.overlay-team ul li .caption{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  
+}
+.overlay-team ul li .caption h4{
+  color: #f6f;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+.overlay-team ul li .title{
+  margin-bottom: 40px;
+}
+.our-team{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+}
+.our-team .except {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+.our-team .except::after {
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: #f73ff7;
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.our-team ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.our-team ul li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: lightgrey;
+  width: 300px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+.our-team ul li::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(194, 52, 194, 0.3);
+  z-index: 0;
+  transition: height 0.4s ease-in-out;
+}
+
+.our-team ul li:hover::after{
+  height: 100%;
+}
+.our-team ul li:hover .our-team-caption h2{
+  color: blue;
+}
+.our-team ul li:hover .icons{
+  visibility: visible;
+}
+
+.our-team-imgs{
+  position: relative;
+}
+.our-team-imgs img{
+  width: 230px;
+  height: 230px;
+  border-radius: 4px;
+}
+.our-team-caption{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.our-team-caption h4{
+  color: rgb(0, 0, 255);
+}
+.our-team-imgs .icons{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 10px; 
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  visibility: hidden;
+}
+.our-team-imgs .icons i{
+  color: blue;
+  font-size: 20px;
+  cursor: pointer;
+  width: 20px; 
+  text-align: center; 
+}
+/*-----------------------------------------------------bolg---------------------------------*/
+.blog{
+  height: 100vh;
+  min-height: 800px;
+  padding-top: 90px;
+}
+.blog h2{
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+.blog h2::after{
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: #f73ff7;
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.blog-content ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+}
+.blog-content ul li{
+  width: 26%;
+  height: 500px;
+  padding: 20px;
+  border: 1px solid #f7f;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+.blog-content ul li::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(194, 52, 194, 0.3);
+  z-index: -1;
+  transition: height 0.4s ease-in-out;
+}
+.blog-content ul li:hover::after{
+  height: 100%;
+}
+.blog-content ul li:hover h3{
+  color: #fff;
+}
+.blog-content ul li img{
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.blog-icons{
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.blog-icons i{
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+.blog-icon{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  gap: 10px;
+}
+.facebook i{
+  color: #3b5998;
+}
+.twitter i{
+  color: #1da1f2;
+}
+  .instagram i{
+  color: #e1306c;
+}
+.linkedin i{
+  color: #0077a1;
+}
+.blog-text p{
+  color: grey;
+  text-align: justify;
+  font-weight: bold;
+  word-spacing: 0;  
+}
+.blog-read-more{
+  text-align: center;
+  padding: 10px;
+  color: blue;
+}
+/*--------------------------------------------------------Contact Us-----------------------------*/
+.contact {
+    background-color:#e056fd;
+    padding: 40px;
+    text-align: center;
+    height: 100vh;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.6);
+}
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0;
+    margin: 0 auto;
+}
+
+.contact-icon i {
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+.contact-icon:nth-child(1) { background-color: #1877F2; } /* Facebook */
+.contact-icon:nth-child(2) { background-color: #0077B5; } /* LinkedIn */
+.contact-icon:nth-child(3) { background-color: #1DA1F2; } /* Twitter */
+.contact-icon:nth-child(4) { background-color: #E1306C; } /* Instagram */
+.contact-icon:nth-child(5) { background-color: #DB4437; } /* Google Plus */
+
+.contact p{
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+    margin: 30px 0;
+}
